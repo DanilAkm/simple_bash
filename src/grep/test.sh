@@ -1,0 +1,18 @@
+#!/bin/bash
+
+diff <(./s21_grep for s21_grep.c parse_grep.c) <(grep for s21_grep.c parse_grep.c)
+diff <(./s21_grep -i INT s21_grep.c) <(grep -i INT s21_grep.c)
+diff <(./s21_grep -v s s21_grep.c) <(grep -v s s21_grep.c)
+diff <(./s21_grep -c s s21_grep.c) <(grep -c s s21_grep.c)
+diff <(./s21_grep -l s print_grep.c parse_grep.c s21_grep.c) <(grep -l s print_grep.c parse_grep.c s21_grep.c)
+diff <(./s21_grep -n s s21_grep.c) <(grep -n s s21_grep.c)
+diff <(./s21_grep -h for s21_grep.c) <(grep -h for s21_grep.c)
+diff <(./s21_grep grep -s 123123) <(grep grep -s 123123)
+diff <(./s21_grep -f pattern s21_grep.c) <(grep -f pattern s21_grep.c)
+diff <(./s21_grep -in InT parse_grep.c) <(grep -in InT parse_grep.c)
+diff <(./s21_grep -cv int parse_grep.c) <(grep -cv int parse_grep.c)
+diff <(./s21_grep -iv s print_grep.c) <(grep -iv s print_grep.c)
+diff <(./s21_grep -lv s print_grep.c parse_grep.c s21_grep.c) <(grep -lv s print_grep.c parse_grep.c s21_grep.c)
+diff <(./s21_grep -nf pattern s21_grep.c) <(grep -nf pattern s21_grep.c)
+diff <(./s21_grep for s21_grep.c s21_grep.h Makefile -v -c -n) <(grep for s21_grep.c s21_grep.h Makefile -v -c -n)
+diff <(./s21_grep for s21_grep.c s21_grep.h Makefile -v -l -n) <(grep for s21_grep.c s21_grep.h Makefile -v -l -n)
